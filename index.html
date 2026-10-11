@@ -53,20 +53,22 @@ body.light .item, body.light .strength, body.light .service, body.light .faq, bo
 body.light .note { background: #fff3cd; color: #333; }
 
 /* Landing splash screen */
-.splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #16233f, #2a3f66); z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; animation: splashOut 1s ease 2.5s forwards; }
-.splash h1 { color: #c2a05e; font-size: 2.5rem; margin-bottom: 10px; text-align: center; padding: 0 20px; animation: slideIn 1s ease; }
-.splash p { color: #e8e4d8; font-size: 1.2rem; animation: slideIn 1.3s ease; }
-@keyframes slideIn { from { transform: translateX(-80px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+.splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #16233f, #2a3f66); z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; animation: splashOut 2s ease 5s forwards; }
+.splash h1 { color: #c2a05e; font-size: 4rem; font-weight: 900; margin-bottom: 15px; text-align: center; padding: 0 20px; animation: slideIn 2.5s ease; }
+.splash p { color: #e8e4d8; font-size: 1.6rem; animation: slideIn 3s ease; }
+.splash img { width: 180px; height: 180px; border-radius: 50%; margin-bottom: 20px; border: 4px solid #c2a05e; animation: slideIn 2s ease; }
+@keyframes slideIn { from { transform: translateX(-120px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 @keyframes splashOut { to { transform: translateX(-100%); opacity: 0; visibility: hidden; } }
 
 /* Hero slide-in */
-header h1 { animation: slideIn 1s ease; }
-header p { animation: slideIn 1.2s ease; }
-header .btn { animation: slideIn 1.4s ease; }</style>
+header h1 { animation: slideIn 2s ease; }
+header p { animation: slideIn 2.5s ease; }
+header .btn { animation: slideIn 3s ease; }</style>
 </head>
 <body>
 
 <div class="splash">
+  <img src="images/logo.png" alt="MIS-2-RAH Logo">
   <h1>Welcome to MIS-2-RAH RENTAL</h1>
   <p>Clean event rentals — we deliver and set up for you!</p>
 </div>
