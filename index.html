@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -63,14 +63,35 @@ body.light .note { background: #fff3cd; color: #333; }
 /* Hero slide-in */
 header h1 { animation: slideIn 2s ease; }
 header p { animation: slideIn 2.5s ease; }
-header .btn { animation: slideIn 3s ease; }</style>
+header .btn { animation: slideIn 3s ease; }/* ===== PHONE SIZE (below 600px) ===== */
+@media only screen and (max-width: 600px) {
+  nav { gap: 6px; padding: 8px; }
+  nav a { padding: 6px 8px; font-size: 0.9rem; }
+  header { padding: 40px 15px; }
+  header h1 { font-size: 1.8rem; }
+  header p { font-size: 1rem; }
+  section { margin: 25px auto; }
+  h2 { font-size: 1.4rem; }
+  .splash h1 { font-size: 2.2rem; }
+  .splash p { font-size: 1.1rem; }
+  .splash img { width: 130px; height: 130px; }
+  .strengths { flex-direction: column; }
+  .items { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  .item { padding: 15px; }
+  .whatsapp { padding: 12px 15px; font-size: 1rem; bottom: 12px; right: 12px; }
+  .btn { padding: 12px 22px; font-size: 1rem; }
+}
+/* ===== PC SIZE (above 600px) ===== */
+@media only screen and (min-width: 601px) {
+  section { max-width: 1000px; }
+}</style>
 </head>
 <body>
 
 <div class="splash">
   <img src="images/logo.png" alt="MIS-2-RAH Logo">
   <h1>Welcome to MIS-2-RAH RENTAL</h1>
-  <p>Clean event rentals — we deliver and set up for you!</p>
+  <p>Clean event rentals â€” we deliver and set up for you!</p>
 </div>
 
 <nav>
@@ -87,7 +108,7 @@ header .btn { animation: slideIn 3s ease; }</style>
 
 <header>
   <h1>MIS-2-RAH RENTAL SERVICE</h1>
-  <p>Clean event rentals — we deliver and set up for you!</p>
+  <p>Clean event rentals â€” we deliver and set up for you!</p>
   <a class="btn" href="#book"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16233f" stroke-width="2" style="vertical-align:middle; margin-right:6px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book Now</a>
 </header>
 
@@ -103,9 +124,9 @@ header .btn { animation: slideIn 3s ease; }</style>
 <section id="items">
   <h2>Our Items</h2>
   <div class="items">
-    <div class="item"><img src="images/chair_nobg.png" alt="Chairs"><p>Chairs</p><p style="color:#f0d9a8; font-weight:bold;">₦2,000 /dozen</p></div>
-    <div class="item"><img src="images/table_nobg.png" alt="Tables"><p>Tables</p><p style="color:#f0d9a8; font-weight:bold;">₦1,500 /day</p></div>
-    <div class="item"><img src="images/canopy.jpg" alt="Canopies"><p>Big Canopy</p><p style="color:#f0d9a8; font-weight:bold;">₦20,000 /day</p></div>
+    <div class="item"><img src="images/chair_nobg.png" alt="Chairs"><p>Chairs</p><p style="color:#f0d9a8; font-weight:bold;">â‚¦2,000 /dozen</p></div>
+    <div class="item"><img src="images/table_nobg.png" alt="Tables"><p>Tables</p><p style="color:#f0d9a8; font-weight:bold;">â‚¦1,500 /day</p></div>
+    <div class="item"><img src="images/canopy.jpg" alt="Canopies"><p>Big Canopy</p><p style="color:#f0d9a8; font-weight:bold;">â‚¦20,000 /day</p></div>
     <div class="item"><img src="images/fan.jpg" alt="Fans"><p>Fans</p><p style="color:#f0d9a8; font-weight:bold;">Price coming soon</p></div>
   </div>
 </section>
@@ -120,26 +141,26 @@ header .btn { animation: slideIn 3s ease; }</style>
     <input type="text" name="location" placeholder="Event Location">
     <button type="submit">Send Booking</button>
   </form>
-  <p id="msg" style="display:none; color:#7ad67a; font-size:1.2rem; text-align:center; margin-top:15px; font-weight:bold;">✅ Thank you for choosing us! Your message has been sent. We will contact you soon.</p>
+  <p id="msg" style="display:none; color:#7ad67a; font-size:1.2rem; text-align:center; margin-top:15px; font-weight:bold;">âœ… Thank you for choosing us! Your message has been sent. We will contact you soon.</p>
 
   <br>
-  <button type="button" onclick="document.getElementById('payment').style.display = document.getElementById('payment').style.display === 'none' ? 'block' : 'none';">💳 Click Here to Make Payment</button>
+  <button type="button" onclick="document.getElementById('payment').style.display = document.getElementById('payment').style.display === 'none' ? 'block' : 'none';">ðŸ’³ Click Here to Make Payment</button>
 
   <div id="payment" style="display:none; background:#26264a; border-radius:12px; padding:25px; margin-top:15px; text-align:center; box-shadow:0 3px 8px rgba(0,0,0,0.3);">
     <h3 style="color:#f0d9a8; margin-bottom:12px;">Payment Details</h3>
-    <p>🏦 <b>Bank:</b> Moniepoint</p>
-    <p>👤 <b>Account Name:</b> Faiz Fazazi Afolabi</p>
-    <p>🔢 <b>Account Number:</b> 9124545110</p>
+    <p>ðŸ¦ <b>Bank:</b> Moniepoint</p>
+    <p>ðŸ‘¤ <b>Account Name:</b> Faiz Fazazi Afolabi</p>
+    <p>ðŸ”¢ <b>Account Number:</b> 9124545110</p>
     <p style="margin-top:10px;">After payment, send your receipt via WhatsApp to confirm your booking.</p>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <p style="text-align:center; font-size:1.2rem;">📞 Call or WhatsApp: <b>09124545110</b></p>
+  <p style="text-align:center; font-size:1.2rem;">ðŸ“ž Call or WhatsApp: <b>09124545110</b></p>
 </section>
 
-<a class="whatsapp" href="https://wa.me/2349124545110?text=Hello%20MIS-2-RAH%20RENTAL%2C%20I%20would%20like%20to%20rent%20items%20for%20my%20event" target="_blank">💬 WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/2349124545110?text=Hello%20MIS-2-RAH%20RENTAL%2C%20I%20would%20like%20to%20rent%20items%20for%20my%20event" target="_blank">ðŸ’¬ WhatsApp</a>
 
 <div class="lightbox" id="lightbox" onclick="this.style.display='none'">
   <span>&times;</span>
@@ -156,7 +177,7 @@ header .btn { animation: slideIn 3s ease; }</style>
 </script>
 
 <footer>
-  <p>© 2026 MIS-2-RAH RENTAL SERVICE</p>
+  <p>Â© 2026 MIS-2-RAH RENTAL SERVICE</p>
 </footer>
 
 <script>
@@ -167,6 +188,7 @@ function toggleTheme(){
 if (localStorage.getItem('theme') === 'light') { document.body.classList.add('light'); }
 </script></body>
 </html>
+
 
 
 
