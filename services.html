@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -19,7 +19,28 @@
 /* Light mode */
 body.light { background: #faf7f0; color: #1a1a2e; }
 body.light .item, body.light .strength, body.light .service, body.light .faq, body.light .photo, body.light form, body.light .info { background: #ffffff; color: #333; }
-body.light .note { background: #fff3cd; color: #333; }</style>
+body.light .note { background: #fff3cd; color: #333; }/* ===== PHONE SIZE (below 600px) ===== */
+@media only screen and (max-width: 600px) {
+  nav { gap: 6px; padding: 8px; }
+  nav a { padding: 6px 8px; font-size: 0.9rem; }
+  header { padding: 40px 15px; }
+  header h1 { font-size: 1.8rem; }
+  header p { font-size: 1rem; }
+  section { margin: 25px auto; }
+  h2 { font-size: 1.4rem; }
+  .splash h1 { font-size: 2.2rem; }
+  .splash p { font-size: 1.1rem; }
+  .splash img { width: 130px; height: 130px; }
+  .strengths { flex-direction: column; }
+  .items { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  .item { padding: 15px; }
+  .whatsapp { padding: 12px 15px; font-size: 1rem; bottom: 12px; right: 12px; }
+  .btn { padding: 12px 22px; font-size: 1rem; }
+}
+/* ===== PC SIZE (above 600px) ===== */
+@media only screen and (min-width: 601px) {
+  section { max-width: 1000px; }
+}</style>
 </head>
 <body>
 
@@ -40,25 +61,25 @@ body.light .note { background: #fff3cd; color: #333; }</style>
 
 <section>
   <div class="service">
-    <h3>🚚 Delivery</h3>
-    <p>We deliver your rented items directly to your event location. Delivery fees depend on distance — contact us for a quote.</p>
+    <h3>ðŸšš Delivery</h3>
+    <p>We deliver your rented items directly to your event location. Delivery fees depend on distance â€” contact us for a quote.</p>
   </div>
   <div class="service">
-    <h3>🛠️ Setup</h3>
+    <h3>ðŸ› ï¸ Setup</h3>
     <p>Our team sets up chairs, tables, canopies and fans so your venue is ready for your event.</p>
   </div>
   <div class="service">
-    <h3>📦 Pickup</h3>
-    <p>After your event, we come back and collect all items — no stress for you!</p>
+    <h3>ðŸ“¦ Pickup</h3>
+    <p>After your event, we come back and collect all items â€” no stress for you!</p>
   </div>
   <div class="service">
-    <h3>📋 Event Packages</h3>
+    <h3>ðŸ“‹ Event Packages</h3>
     <p>Bundle items together (e.g., 50 chairs + 10 tables + 2 canopies) and enjoy package pricing. Ask us for details!</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 MIS-2-RAH RENTAL SERVICE | 📞 09124545110</p>
+  <p>Â© 2026 MIS-2-RAH RENTAL SERVICE | ðŸ“ž 09124545110</p>
 </footer>
 
 <script>
@@ -69,6 +90,7 @@ function toggleTheme(){
 if (localStorage.getItem('theme') === 'light') { document.body.classList.add('light'); }
 </script></body>
 </html>
+
 
 
 
